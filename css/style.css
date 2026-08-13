@@ -82,6 +82,11 @@ header{
     height: 85dvh;
     background-color: #E0E7FF;
 
+    .description{
+        text-align: center;
+        line-height: 1.6;
+    }
+
     .see-products{
         background-color: #F97362;
         border: none;
