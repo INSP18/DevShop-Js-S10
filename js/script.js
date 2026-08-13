@@ -1,3 +1,4 @@
+let cart = []
 async function getProducts() {
     try{
         const response = await fetch("https://fakestoreapi.com/products");
@@ -22,8 +23,23 @@ function displayProducts(products){
             <p class="category">${product.category}</p>
             <h3 class="title">${product.title}</h3>
             <p class="price">${product.price}$</p>
-            <button class="product-btn" id>+</button>
+            <button class="product-btn" onclick="addTocart(${product.id})">+</button>
         </article>`
+    }
+}
+
+async function addTocart(productId){
+    try{
+        const response = await fetch(`https://fakestoreapi.com/products/${productId}`)
+        const product = await response.json()
+
+        cart.push(product)
+        console.log('Produit ajouté au panier', product.title)
+        console.log('contenu actuel du panier', cart)
+
+        alert(`${product.title} a été ajouté au panier`)
+    }catch(error){
+        console.error(" Impossible de charger les produits pour le moment. Réessayer")
     }
 }
 getProducts();
