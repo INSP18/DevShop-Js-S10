@@ -69,6 +69,26 @@ header{
                 }
             }
         }
+        .count{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 25%;
+
+            #cart-count{
+                position: absolute;
+                top:-4px;
+                right: -7px;
+                background-color: #F97362;
+                color: white;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                font-size: 0.9rem;
+                padding: 2px;
+                border-radius: 999px;
+            }
+        }
     }
 }
 
