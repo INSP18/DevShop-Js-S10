@@ -19,9 +19,10 @@ function displayProducts(products){
         container.innerHTML +=`
         <article class="product-card">
             <img src="${product.image}" alt="${product.title}">
-            <h3>${product.title}</h3>
+            <p class="category">${product.category}</p>
+            <h3 class="title">${product.title}</h3>
             <p class="price">${product.price}$</p>
-            <button>Ajouter au pannier</button>
+            <button class="product-btn" id>+</button>
         </article>`
     }
 }
