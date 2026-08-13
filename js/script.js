@@ -37,9 +37,18 @@ async function addTocart(productId){
         console.log('Produit ajouté au panier', product.title)
         console.log('contenu actuel du panier', cart)
 
+        updateCartCount()
+
         alert(`${product.title} a été ajouté au panier`)
     }catch(error){
         console.error(" Impossible de charger les produits pour le moment. Réessayer")
+    }
+
+    function updateCartCount() {
+        const cartCountElement = document.getElementById("cart-count");
+        if (cartCountElement){
+            cartCountElement.textContent = cart.length;
+        }
     }
 }
 getProducts();
