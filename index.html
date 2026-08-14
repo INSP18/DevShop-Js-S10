@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevShop – Boutique en ligne : mode, électronique, bijoux & maison</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <img src="/images/logo.png" alt="logo du site" width="80" height="40">
+            <img src="images/logo.png" alt="logo du site" width="80" height="40">
             <ul>
                 <li><a href="#Accueil">Accueil</a></li>
                 <li><a href="#Product">Produits</a></li>
@@ -19,14 +19,14 @@
             <div class="count">
                 <input type="text" placeholder="chercher un produit..." id="chercher-produits" oninput="searchProducts(this.value)">
                 <div>
-                    <img src="/images/panier.png" alt="panier" width="30" height="30">
+                    <img src="images/panier.png" alt="panier" width="30" height="30">
                     <span id="cart-count">0</span>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="hero-section">
+        <section class="hero-section" id="Accueil">
             <h1>Trouvez tout ce qu'il vous faut, en un seul endroit</h1>
             <h3>Électronique, mode, bijoux et articles pour la maison : 
                 une sélection pensée pour vous, avec un panier qui vous suit partout.</h3>
@@ -36,7 +36,7 @@
             <button class="see-products" id="seeProducts">Voir les produits</button>
             <section class="warranty">
                 <div class="warranty-child">
-                    <img src="/images/paiement-securise.png" alt="secure paiement image" width="30" height="30">
+                    <img src="images/paiement-securise.png" alt="secure paiement image" width="30" height="30">
                     <div class="warranty-description">
                         <h5>Paiement sécurisé<br></h5>
                         <p class="p-warranty">100% protégé</p>
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="warranty-child">
-                    <img src="/images/livraison-rapide.png" alt="delivery image" width="30" height="30">
+                    <img src="images/livraison-rapide.png" alt="delivery image" width="30" height="30">
                     <div class="warranty-description">
                         <h5>Livraison rapide</h5>
                         <p class="p-warranty">Sous 48h</p>
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="warranty-child">
-                    <img src="/images/boite-de-retour.png" alt="repaiement image" width="30" height="30">
+                    <img src="images/boite-de-retour.png" alt="repaiement image" width="30" height="30">
                     <div class="warranty-description">
                         <h5>Retour gratuit</h5>
                         <p class="p-warranty">Sous 30 jours</p>
@@ -60,10 +60,10 @@
                 </div>
             </section>
         </section>
-        <section class="parent-ProductContainer">
+        <section class="parent-ProductContainer" id="Product">
             <h2 class="productsTitle">Nos produits</h2>
             <p class="productDescription">Découvrez notre sélection de produits de qualité.</p>
-            <div class="categoryBtns">
+            <div class="categoryBtns" id="#Category">
                 <div>
                     <button class="category-btn" onclick="filteredProducts('Tous')">Tous</button>
                     <button class="category-btn" onclick="filteredProducts('men\'s clothing')">men's clothing</button>
