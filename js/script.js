@@ -65,4 +65,15 @@ function filteredProducts(choix) {
     displayProducts(filteredProduct)
 }
 
+function searchProducts(rechercheTexte){
+    const texteMinuscule = rechercheTexte.toLowerCase()
+
+    const produitRecherche = products.filter(function(product){
+        const titreMinuscule = product.category.toLowerCase()
+        return titreMinuscule.includes(texteMinuscule)
+    })
+
+    displayProducts(produitRecherche)
+}
+
 getProducts();
