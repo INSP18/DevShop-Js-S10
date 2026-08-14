@@ -32,9 +32,7 @@
                 une sélection pensée pour vous, avec un panier qui vous suit partout.</h3>
             <p class="description">DevShop rassemble une sélection de produits soigneusement choisis dans quatre univers :<br> 
                 high-tech, mode homme et femme, bijoux
-                et maison. Notre moteur de recherche instantané et <br>nos filtres par catégorie vous 
-                permettent de trouver exactement ce que vous
-                cherchez, sans perdre de temps..</p>
+                et maison.</p>
             <button class="see-products" id="seeProducts">Voir les produits</button>
             <section class="warranty">
                 <div class="warranty-child">
@@ -62,8 +60,19 @@
                 </div>
             </section>
         </section>
-        <section class="products" id="products-container">
-            <h2>Nos produits</h2>
+        <section class="parent-ProductContainer">
+            <h2 class="productsTitle">Nos produits</h2>
+            <p class="productDescription">Découvrez notre sélection de produits de qualité.</p>
+            <div class="categoryBtns">
+                <div>
+                    <button class="category-btn" onclick="filteredProducts('Tous')">Tous</button>
+                    <button class="category-btn" onclick="filteredProducts('men\'s clothing')">men's clothing</button>
+                    <button class="category-btn" onclick="filteredProducts('jewelery')">jewelery</button>
+                    <button class="category-btn" onclick="filteredProducts('electronics')">electronics</button>
+                    <button class="category-btn" onclick="filteredProducts('women\'s clothing')">women's clothing</button>
+                </div>
+            </div>
+            <section class="products" id="products-container"></section>
         </section>
     </main>
     <footer></footer>

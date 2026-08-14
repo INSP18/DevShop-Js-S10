@@ -1,8 +1,9 @@
 let cart = []
+let products = []
 async function getProducts() {
     try{
         const response = await fetch("https://fakestoreapi.com/products");
-        const products = await response.json();
+        products = await response.json();
         console.log(products)
 
         displayProducts(products)
@@ -51,4 +52,17 @@ async function addTocart(productId){
         }
     }
 }
+
+function filteredProducts(choix) {
+    if(choix==='Tous'){
+        displayProducts(products)
+        return
+    }
+    const filteredProduct = products.filter(function(product){
+        return product.category === choix
+    })
+
+    displayProducts(filteredProduct)
+}
+
 getProducts();

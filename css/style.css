@@ -102,8 +102,9 @@ header{
     align-items: center;
     gap: 20px;
     width: 100%;
-    height: 85dvh;
+    height: 90dvh;
     background-color: #E0E7FF;
+    margin-bottom: 25px;
 
     .description{
         text-align: center;
@@ -154,7 +155,7 @@ header{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 50px;
+    padding: 25px 50px;
 
     .product-card{
         display: flex;
@@ -209,6 +210,33 @@ header{
             height: 200px;
             object-fit: contain;
             overflow: hidden;
+        }
+    }
+}
+
+.parent-ProductContainer{
+    .productsTitle{
+        margin-left: 50px;
+    }
+    .productDescription{
+        margin-left: 50px;
+    }
+    .categoryBtns{
+        margin: 25px 50px 0;
+        display: flex;
+        gap: 8px;
+
+        .category-btn{
+            padding: 10px;
+            border-radius: 999px;
+            border: none;
+            background-color: #E0E7FF;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .category-btn:hover{
+            background-color: #1E1B4B;
+            color: white;
         }
     }
 }
